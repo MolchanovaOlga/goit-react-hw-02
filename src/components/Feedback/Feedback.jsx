@@ -1,18 +1,20 @@
-//import css from './Feedback.module.css';
-
-const Feedback = ({ counter: { good, neutral, bad } }) => {
+const Feedback = ({ counter: { good, neutral, bad }, total, positive }) => {
   return (
-    <ul>
-      <li>
-        <p>Good: {good}</p>
-      </li>
-      <li>
-        <p>Neutral: {neutral}</p>
-      </li>
-      <li>
-        <p>Bad: {bad}</p>
-      </li>
-    </ul>
+    <div>
+      <ul>
+        <li>
+          <p>Good: {good}</p>
+        </li>
+        <li>
+          <p>Neutral: {neutral}</p>
+        </li>
+        <li>
+          <p>Bad: {bad}</p>
+        </li>
+      </ul>
+      <p>Total: {total}</p>
+      <p>Positive: {positive}%</p>
+    </div>
   );
 };
 
